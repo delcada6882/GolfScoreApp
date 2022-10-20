@@ -33,23 +33,40 @@ async function getCourse(id) {
     return fetch(url).then((response) => response.json())
 }
 
-async function initializeOnLoad() {
-    const data = await getCourse("18300");
+async function initializeOnLoad(id="18300") {
+    const data = await getCourse(id);
     displayDataToPage(data)
 }
 
 function displayDataToPage(data) {
     console.log(data)
-    // const temperatures = data.hourly['temperature_2m']
-    // const degreesInFarenheit = temperatures[temperatures.length - 1];
+    
 }
 
 window.onload = initializeOnLoad();
 
 
+let courseshtml = document.getElementsByClassName('course')
 
+function selectCourse(item) {
+    let courseID = item.id
+    for (let x = 0; x < courseshtml.length; x++) {
+        if (courseshtml[x].classList.contains("active"))
+            courseshtml[x].classList.remove('active')
+    }
+    item.classList.add('active');
 
-
+    if (courseID == "fox") {
+        initializeOnLoad("18300")
+    }
+    else if (courseID == "thanks") {
+        initializeOnLoad("11819")
+    }
+    else if (courseID == "spanish") {
+        initializeOnLoad("19002")
+    }
+    
+}
 
 let yardNum = document.getElementsByClassName('yard');
 let yardTotal = document.getElementById('yard-total')

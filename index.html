@@ -10,16 +10,18 @@
 </head>
 <body>
     <div id="header">
-        <div class="form-group">
-            <label for="course-select">Select Course:</label>
-            <select class="form-control" id="course-select">
-                <option value="1">Fox Hollow</option>
-                <option value="2">Thanksgiving Point</option>
-                <option value="3">Spanish Oaks</option>
-            </select>
-          </div>
+        <h1>Let's play some golf!</h1>
     </div>
-      
+
+    <div class="form-group">
+        <h1>Select Course: </h1>
+        <div class="options">
+            <h1 id="fox" class="course active" onclick="selectCourse(this)">Fox Hollow</h1>
+            <h1 id="thanks" class="course" onclick="selectCourse(this)">Thanksgiving Point</h1>
+            <h1 id="spanish" class="course" onclick="selectCourse(this)">Spanish Oaks</h1>
+        </div>
+      </div>
+    
     <table>
         <thead class="table-sm">
             <tr>
@@ -52,28 +54,28 @@
             </tr>
             <tr id="par">
                 <th>Par</th>
-                <td>4</td>
-                <td>5</td>
-                <td>3</td>
-                <td>4</td>
-                <td>4</td>
-                <td>4</td>
-                <td>4</td>
-                <td>3</td>
-                <td>5</td>
+                <td class="par">4</td>
+                <td class="par">5</td>
+                <td class="par">3</td>
+                <td class="par">4</td>
+                <td class="par">4</td>
+                <td class="par">4</td>
+                <td class="par">4</td>
+                <td class="par">3</td>
+                <td class="par">5</td>
                 <td>total</td>
             </tr>
             <tr id="handicap">
                 <th>Handicap</th>
-                <td>3</td>
-                <td>5</td>
-                <td>11</td>
-                <td>13</td>
-                <td>15</td>
-                <td>1</td>
-                <td>9</td>
-                <td>17</td>
-                <td>7</td>
+                <td class="handicap">3</td>
+                <td class="handicap">5</td>
+                <td class="handicap">11</td>
+                <td class="handicap">13</td>
+                <td class="handicap">15</td>
+                <td class="handicap">1</td>
+                <td class="handicap">9</td>
+                <td class="handicap">17</td>
+                <td class="handicap">7</td>
                 <td></td>
             </tr>
             <tr id="player">
