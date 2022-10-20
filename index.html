@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="form-group">
+            <label for="course-select">Select Course:</label>
+            <select class="form-control" id="course-select">
+                <option value="1">Fox Hollow</option>
+                <option value="2">Thanksgiving Point</option>
+                <option value="3">Spanish Oaks</option>
+            </select>
+          </div>
+    </div>
+      
+    <table>
+        <thead class="table-sm">
+            <tr>
+                <th>Hole</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>Out</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="yardage">
+                <th>Yardage</th>
+                <td class="yard">391</td>
+                <td class="yard">521</td>
+                <td class="yard">195</td>
+                <td class="yard">421</td>
+                <td class="yard">352</td>
+                <td class="yard">352</td>
+                <td class="yard">352</td>
+                <td class="yard">429</td>
+                <td class="yard">486</td>
+                <td id="yard-total">total</td>
+            </tr>
+            <tr id="par">
+                <th>Par</th>
+                <td>4</td>
+                <td>5</td>
+                <td>3</td>
+                <td>4</td>
+                <td>4</td>
+                <td>4</td>
+                <td>4</td>
+                <td>3</td>
+                <td>5</td>
+                <td>total</td>
+            </tr>
+            <tr id="handicap">
+                <th>Handicap</th>
+                <td>3</td>
+                <td>5</td>
+                <td>11</td>
+                <td>13</td>
+                <td>15</td>
+                <td>1</td>
+                <td>9</td>
+                <td>17</td>
+                <td>7</td>
+                <td></td>
+            </tr>
+            <tr id="player">
+                <th><input type="text" name="player" id="player" placeholder=".."></th>
+                <td><input type="number" name="score" id="score"></td>
+                <td><input type="number" name="score" id="score"></td>
+                <td><input type="number" name="score" id="score"></td>
+                <td><input type="number" name="score" id="score"></td>
+                <td><input type="number" name="score" id="score"></td>
+                <td><input type="number" name="score" id="score"></td>
+                <td><input type="number" name="score" id="score"></td>
+                <td><input type="number" name="score" id="score"></td>
+                <td><input type="number" name="score" id="score"></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

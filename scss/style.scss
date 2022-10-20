@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$off-black: #0a0a0a;
+$dark-blue: #2A324B;
+$off-white: #fbfbff;
+$red: #EF626C;
+$purple: #9D44B5;
+$blue: #01BFF4;
+$green: #20BF55;
+$light-yellow: #FCDC9C;
+
+* {
+    font-family: 'Lato';
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $light-yellow;
+}
+#header {
+    background-color: $green;
+    width: 100%;
+    text-align: center;
+    color: $off-white;
+    margin-bottom: 10px;
+}
+table, th, td {
+    border: 2px solid $off-black;
+    border-collapse: collapse;
+}
+thead td, thead th{
+    text-align: center;
+    background-color: $dark-blue;
+    color: $off-white;
+}
+td {
+    padding: 10px;
+}
+#yardage td, #yardage th {
+    background-color: $red;
+    color: $off-white;
+}
+#par td, #par th {
+    background-color: $purple;
+    color: $off-white;
+}
+#handicap td, #handicap th {
+    background-color: $blue;
+    color: $off-white;
+}
+#header {
+    font-size: 40px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+#player td, #player th {
+    padding: 0;
+    margin: 0;
+    height: calc(100% + 100%);
+    
+}
+input {
+    border: none;
+    width: calc(100% - 10px);
+    height: 30px;
+    padding-left: 10px;
+}
+input:focus {
+    border: none;
+    outline: none;
+}
+#course-select {
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 20px;
+    outline: none;
+    border-width: 0;
+}
