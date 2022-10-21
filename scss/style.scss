@@ -22,7 +22,8 @@ body {
     justify-content: center;
     align-items: center;
     background-color: $light-yellow;
-    background-image: url("/80s\ Background.png")
+    background-image: url("/80s\ Background.png");
+    position: relative;
 }
 #header {
     width: 100%;
@@ -59,6 +60,10 @@ thead td, thead th{
     background-color: $dark-blue;
     color: $off-white;
 }
+th {
+    text-align: left;
+    padding-left: 10px;
+}
 td {
     padding: 10px;
 }
@@ -74,17 +79,13 @@ td {
     background-color: $blue;
     color: $dark-blue;
 }
-#player td, #player th {
+.playInp {
     padding: 0;
     margin: 0;
     height: calc(100% + 100%);
-    
 }
-input {
-    border: none;
-    width: calc(100% - 10px);
-    height: 30px;
-    padding-left: 10px;
+.playerName {
+    background-color: white;
 }
 input:focus {
     border: none;
@@ -148,4 +149,62 @@ input:focus {
     transition: 0.2s;
     cursor: pointer;
     color: $off-white;
+}
+input[type="text"] {
+    font-weight: bold;
+    font-size: 15px;
+    background-color: $off-white;
+    border: none;
+    width: calc(100% - 10px);
+    height: 35px;
+}
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+    
+}
+input[type="number"] {
+    border: none;
+    width: calc(100% - 10px);
+    background-color: $off-white;
+}
+.player {
+    background-color: $off-white;
+}
+.playerSpec {
+    background-color: white;
+    padding-left: 10px;
+}
+#prevCard {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: black;
+    border: $yellow 2px solid;
+    color: $off-white;
+    position: absolute;
+    right: 87%;
+    top: 120%;
+    font-size: 20px;
+    transition: 0.2s;
+}
+#prevCard:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+#nextCard {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: black;
+    border: $yellow 2px solid;
+    color: $off-white;
+    position: absolute;
+    left: 89%;
+    top: 120%;
+    font-size: 20px;
+    transition: 0.2s;
+}
+#nextCard:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s;
 }

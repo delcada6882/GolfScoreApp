@@ -40,7 +40,60 @@ async function initializeOnLoad(id="18300") {
 
 function displayDataToPage(data) {
     console.log(data)
-    
+    displayOnYard(data);
+    displayOnPar(data);
+    displayOnHCP(data);
+    displayOnPlayer();
+}
+
+function displayOnYard(data){
+    let yardNum = document.getElementsByClassName('yard');
+    let yardTotal = document.getElementById('yard-total')
+    let yardTot = 0;
+    for (let x = 0; x < 9; x++) {
+        let yardsDataNum = data.data.holes[x].teeBoxes[0].yards
+        yardTot += yardsDataNum;
+        yardNum[x].innerHTML = yardsDataNum;
+
+    }
+    yardTotal.innerHTML = `${yardTot}`;
+}
+function displayOnPar(data){
+    let parNum = document.getElementsByClassName('par');
+    let parTotal = document.getElementById('par-total')
+    let parTot = 0;
+    for (let x = 0; x < 9; x++) {
+        let parDataNum = data.data.holes[x].teeBoxes[0].par
+        parTot += parDataNum;
+        parNum[x].innerHTML = parDataNum;
+
+    }
+    parTotal.innerHTML = `${parTot}`;
+}
+function displayOnHCP(data){
+    let hcpNum = document.getElementsByClassName('handicap');
+    let hcpTotal = document.getElementById('hcp-total')
+    let hcpTot = 0;
+    for (let x = 0; x < 9; x++) {
+        let hcpDataNum = data.data.holes[x].teeBoxes[0].hcp
+        hcpTot += hcpDataNum;
+        hcpNum[x].innerHTML = hcpDataNum;
+
+    }
+    hcpTotal.innerHTML = `${hcpTot}`;
+}
+function displayOnPlayer(){
+    let playNum = document.getElementsByClassName('playInp');
+    let playTotal = document.getElementById('play-total')
+    let playTot = 0;
+    for (let x = 0; x < 9; x++) {
+        let playDataNum = Number(playNum[x].value);
+        console.log(playDataNum)
+        playTot += playDataNum;
+        playNum[x].innerHTML = playDataNum;
+
+    }
+    playTotal.innerHTML = `${playTot}`;
 }
 
 window.onload = initializeOnLoad();
@@ -67,15 +120,3 @@ function selectCourse(item) {
     }
     
 }
-
-let yardNum = document.getElementsByClassName('yard');
-let yardTotal = document.getElementById('yard-total')
-let yardTot = 0;
-console.log(yardNum);
-for (let x = 0; x < yardNum.length; x++) {
-    yardTot += Number(yardNum[x].innerHTML);
-    console.log(yardTot)
-}
-console.log(yardTot)
-yardTotal.innerHTML = `${yardTot}`;
-
