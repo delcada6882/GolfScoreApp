@@ -21,8 +21,15 @@
             <h1 id="spanish" class="course" onclick="selectCourse(this)">Spanish Oaks</h1>
         </div>
       </div>
+
+    <div id="teeBoxes">
+        <p class="optionOfTeeBoxes" id="pro" onclick="selectTee(this)"><span id="proText">Pro</span></p>
+        <p class="optionOfTeeBoxes" id="champ" onclick="selectTee(this)"><span id="champText">Champ</span></p>
+        <p class="optionOfTeeBoxes" id="men" onclick="selectTee(this)"><span id="menText">Men</span></p>
+        <p class="optionOfTeeBoxes" id="women" onclick="selectTee(this)"><span id="womenText">Women</span></p>
+    </div>
     
-    <table>
+    <table id="oneToNine">
         <thead class="table-sm">
             <tr>
                 <th>Hole</th>
@@ -78,22 +85,27 @@
                 <td class="handicap"></td>
                 <td id="hcp-total"></td>
             </tr>
-            <tr id="player">
-                <th class="playerName"><input type="text" name="player" id="player" placeholder=". . ."></th>
-                <td class="player"><input type="number" class="playInp" name="score" id="score1" placeholder=". . ." onchange="displayOnPlayer()"></td>
-                <td class="player"><input type="number" class="playInp" name="score" id="score2" placeholder=". . ." onchange="displayOnPlayer()"></td>
-                <td class="player"><input type="number" class="playInp" name="score" id="score3" placeholder=". . ." onchange="displayOnPlayer()"></td>
-                <td class="player"><input type="number" class="playInp" name="score" id="score4" placeholder=". . ." onchange="displayOnPlayer()"></td>
-                <td class="player"><input type="number" class="playInp" name="score" id="score5" placeholder=". . ." onchange="displayOnPlayer()"></td>
-                <td class="player"><input type="number" class="playInp" name="score" id="score6" placeholder=". . ." onchange="displayOnPlayer()"></td>
-                <td class="player"><input type="number" class="playInp" name="score" id="score7" placeholder=". . ." onchange="displayOnPlayer()"></td>
-                <td class="player"><input type="number" class="playInp" name="score" id="score8" placeholder=". . ." onchange="displayOnPlayer()"></td>
-                <td class="player"><input type="number" class="playInp" name="score" id="score9" placeholder=". . ." onchange="displayOnPlayer()"></td>
-                <td class="playerSpec" id="play-total"></td>
+            <tr id="player1" class="playerHeader">
+                <th class="playerName1 players"><input type="text" name="player" id="player" placeholder=". . ."></th>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score1" placeholder=". . ." onchange="displayOnPlayer()"></td>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score2" placeholder=". . ." onchange="displayOnPlayer()"></td>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score3" placeholder=". . ." onchange="displayOnPlayer()"></td>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score4" placeholder=". . ." onchange="displayOnPlayer()"></td>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score5" placeholder=". . ." onchange="displayOnPlayer()"></td>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score6" placeholder=". . ." onchange="displayOnPlayer()"></td>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score7" placeholder=". . ." onchange="displayOnPlayer()"></td>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score8" placeholder=". . ." onchange="displayOnPlayer()"></td>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score9" placeholder=". . ." onchange="displayOnPlayer()"></td>
+                <td class="playerSpec players" id="play-total1"></td>
+            </tr>
+            <tr>
+                <td onclick="addPlayer(this)" id="newPlay" colspan="11"><p>+</p></td>
             </tr>
         </tbody>
     </table>
-    <input type="button" value="← Previous Card" id="prevCard">
-    <input type="button" value="Next Card →" id="nextCard">
+    <input type="button" value="← Previous Card" id="prevCard" onclick="prevCard()">
+    <input type="button" value="→" id="nextCard" onclick="nextCard()">
+
+    <h1 id="playerLimit">You can only have 5 players</h1>
 </body>
 </html>

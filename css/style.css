@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --background-color: #161A27;
+  --text-color: #fbfbff;
+  --placeholder-color: #D6D6FF;
+}
+
 * {
   font-family: "Lato";
   margin: 0;
@@ -12,7 +18,9 @@ body {
   align-items: center;
   background-color: #FCDC9C;
   background-image: url("/80s Background.png");
+  background-size: auto;
   position: relative;
+  width: 99.4vw;
 }
 
 #header {
@@ -31,8 +39,9 @@ body {
 }
 
 table {
-  margin-top: 60px;
+  margin: 60px auto;
   box-shadow: inset 0 0 50px #fbfbff, inset 20px 0 80px #9411CD, inset -20px 0 80px #35E7FF, inset 20px 0 300px #9411CD, inset -20px 0 300px #35E7FF, 0 0 50px #fbfbff, -10px 0 80px #9411CD, 10px 0 80px #35E7FF; /* outer right cyan */
+  transform: scale(0.95);
 }
 
 table, th, td {
@@ -42,7 +51,7 @@ table, th, td {
 
 thead td, thead th {
   text-align: center;
-  background-color: #2A324B;
+  background-color: #333D5B;
   color: #fbfbff;
 }
 
@@ -67,7 +76,7 @@ td {
 
 #handicap td, #handicap th {
   background-color: #35E7FF;
-  color: #2A324B;
+  color: #333D5B;
 }
 
 .playInp {
@@ -77,7 +86,7 @@ td {
 }
 
 .playerName {
-  background-color: white;
+  background-color: #fbfbff;
 }
 
 input:focus {
@@ -152,16 +161,21 @@ input:focus {
 .active:hover {
   transition: 0.2s;
   cursor: pointer;
-  color: #fbfbff;
+  color: #161A27;
 }
 
 input[type=text] {
   font-weight: bold;
   font-size: 15px;
-  background-color: #fbfbff;
+  background-color: var(--background-color);
   border: none;
+  color: var(--text-color);
   width: calc(100% - 10px);
   height: 35px;
+}
+
+input[type=text]::placeholder {
+  color: var(--placeholder-color);
 }
 
 input[type=number]::-webkit-inner-spin-button {
@@ -171,15 +185,21 @@ input[type=number]::-webkit-inner-spin-button {
 input[type=number] {
   border: none;
   width: calc(100% - 10px);
-  background-color: #fbfbff;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-.player {
-  background-color: #fbfbff;
+input[type=number]::placeholder {
+  color: var(--placeholder-color);
+}
+
+.playerHeader td, .playerHeader th {
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .playerSpec {
-  background-color: white;
+  background-color: #0a0a0a;
   padding-left: 10px;
 }
 
@@ -209,8 +229,8 @@ input[type=number] {
   border: #F7CA08 2px solid;
   color: #fbfbff;
   position: absolute;
-  left: 89%;
-  top: 120%;
+  left: 88vw;
+  top: 10vh;
   font-size: 20px;
   transition: 0.2s;
 }
@@ -219,6 +239,133 @@ input[type=number] {
   cursor: pointer;
   transform: scale(1.1);
   transition: 0.2s;
+}
+
+#newPlay {
+  background-color: #333D5B;
+  color: #fbfbff;
+  font-weight: 900;
+  font-size: 22px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  transition: 0.2s;
+}
+#newPlay p {
+  transition: 0.2s;
+}
+
+#newPlay:hover {
+  transition: 0.2s;
+  cursor: pointer;
+  padding: 0;
+  text-shadow: 0px 0px 27px rgba(255, 255, 255, 0.8);
+}
+#newPlay:hover p {
+  transition: 0.2s;
+  transform: scale(1.2);
+  padding: 0;
+}
+
+#teeBoxes {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  position: absolute;
+  left: 38.2vw;
+  top: 15.5vh;
+  border: 3px solid #0a0a0a;
+  border-radius: 14px;
+  display: none;
+  z-index: 5;
+}
+
+#teeBoxes p {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  padding: 5px 20px;
+}
+
+#pro {
+  background-color: #161A27;
+  color: #fbfbff;
+  transition: 0.2s;
+  border-start-start-radius: 10px;
+  border-start-end-radius: 10px;
+}
+
+#proText {
+  transition: 0.2s;
+}
+
+#pro:hover {
+  cursor: pointer;
+}
+#pro:hover #proText {
+  transition: 0.2s;
+  transform: scale(1.1);
+}
+
+#champ {
+  background-color: #14BFE1;
+  transition: 0.2s;
+}
+
+#champText {
+  color: #fbfbff;
+  transition: 0.2s;
+}
+
+#champ:hover {
+  cursor: pointer;
+}
+#champ:hover #champText {
+  transition: 0.2s;
+  transform: scale(1.1);
+}
+
+#men {
+  background-color: #fbfbff;
+  transition: 0.2s;
+}
+
+#menText {
+  transition: 0.2s;
+}
+
+#men:hover {
+  cursor: pointer;
+}
+#men:hover #menText {
+  transition: 0.2s;
+  transform: scale(1.1);
+}
+
+#women {
+  background-color: #F4154D;
+  border-end-end-radius: 10px;
+  border-end-start-radius: 10px;
+}
+
+#womenText {
+  transition: 0.2s;
+  color: #fbfbff;
+}
+
+#women:hover {
+  cursor: pointer;
+}
+#women:hover #womenText {
+  transition: 0.2s;
+  transform: scale(1.1);
+}
+
+#playerLimit {
+  color: #F4154D;
+  transition: 1s;
+  opacity: 0;
+  background-color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
