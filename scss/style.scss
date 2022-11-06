@@ -84,7 +84,15 @@ td {
     background-color: $red;
     color: $off-white;
 }
+#yardageTwo td, #yardageTwo th {
+    background-color: $red;
+    color: $off-white;
+}
 #par td, #par th {
+    background-color: $purple;
+    color: $off-white;
+}
+#parTwo td, #parTwo th {
     background-color: $purple;
     color: $off-white;
 }
@@ -92,10 +100,9 @@ td {
     background-color: $blue;
     color: $dark-blue;
 }
-.playInp {
-    padding: 0;
-    margin: 0;
-    height: calc(100% + 100%);
+#handicapTwo td, #handicapTwo th {
+    background-color: $blue;
+    color: $dark-blue;
 }
 .playerName {
     background-color: $off-white;
@@ -163,7 +170,7 @@ input:focus {
     cursor: pointer;
     color: $dark-grey;
 }
-input[type="text"] {
+.players input[type="text"] {
     font-weight: bold;
     font-size: 15px;
     background-color: var(--background-color);
@@ -191,6 +198,10 @@ input[type="number"] {
     background-color: var(--background-color);
     color: var(--text-color);
 }
+.playerHeaderTwo td, .playerHeaderTwo th {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
 .playerSpec {
     background-color: $off-black;
     padding-left: 10px;
@@ -202,8 +213,8 @@ input[type="number"] {
     border: $yellow 2px solid;
     color: $off-white;
     position: absolute;
-    right: 87%;
-    top: 120%;
+    left: 9vw;
+    top: 10vh;
     font-size: 20px;
     transition: 0.2s;
 }
@@ -242,6 +253,30 @@ input[type="number"] {
         transition: 0.2s;
     }
 }
+#newPlayTwo {
+    background-color: $dark-blue;
+    color: $off-white;
+    font-weight: 900;
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    transition: 0.2s;
+    p {
+        transition: 0.2s;
+    }
+}
+#newPlayTwo:hover {
+    transition: 0.2s;
+    cursor: pointer;
+    padding: 0;
+    text-shadow: 0px 0px 27px rgba(255,255,255,0.8);
+    p {
+        transition: 0.2s;
+        transform: scale(1.2);
+        padding: 0;
+    }
+}
 #newPlay:hover {
     transition: 0.2s;
     cursor: pointer;
@@ -259,7 +294,7 @@ input[type="number"] {
     flex-flow: column;
     position: absolute;
     left: 38.2vw;
-    top: 15.5vh;
+    top: 14.5vh;
     border: 3px solid $off-black;
     border-radius: 14px;
     display: none;
@@ -335,7 +370,10 @@ input[type="number"] {
 }
 #playerLimit {
     color: $darker-red;
-    transition: 1s;
+    transition: 0.2s;
     opacity: 0;
     background-color: black;
+}
+#nineToEighteen {
+    display: none;
 }

@@ -22,14 +22,14 @@
         </div>
       </div>
 
-    <div id="teeBoxes">
+    <div id="teeBoxes" onpointerleave="closeSelectTee()" on>
         <p class="optionOfTeeBoxes" id="pro" onclick="selectTee(this)"><span id="proText">Pro</span></p>
         <p class="optionOfTeeBoxes" id="champ" onclick="selectTee(this)"><span id="champText">Champ</span></p>
         <p class="optionOfTeeBoxes" id="men" onclick="selectTee(this)"><span id="menText">Men</span></p>
         <p class="optionOfTeeBoxes" id="women" onclick="selectTee(this)"><span id="womenText">Women</span></p>
     </div>
     
-    <table id="oneToNine">
+    <table id="oneToNine" onmouseover="closeSelectTee()">
         <thead class="table-sm">
             <tr>
                 <th>Hole</th>
@@ -86,7 +86,7 @@
                 <td id="hcp-total"></td>
             </tr>
             <tr id="player1" class="playerHeader">
-                <th class="playerName1 players"><input type="text" name="player" id="player" placeholder=". . ."></th>
+                <th class="playerName1 players 1"><input type="text" name="player" id="player" placeholder=". . ." onchange="newPlayerName(this)"></th>
                 <td class="player1 players"><input type="number" class="playInp1" name="score" id="score1" placeholder=". . ." onchange="displayOnPlayer()"></td>
                 <td class="player1 players"><input type="number" class="playInp1" name="score" id="score2" placeholder=". . ." onchange="displayOnPlayer()"></td>
                 <td class="player1 players"><input type="number" class="playInp1" name="score" id="score3" placeholder=". . ." onchange="displayOnPlayer()"></td>
@@ -103,8 +103,94 @@
             </tr>
         </tbody>
     </table>
-    <input type="button" value="← Previous Card" id="prevCard" onclick="prevCard()">
-    <input type="button" value="→" id="nextCard" onclick="nextCard()">
+
+
+
+
+
+    <table id="nineToEighteen">
+        <thead class="table-sm">
+            <tr>
+                <th>Hole</th>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>In</td>
+                <td>Total</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="yardageTwo">
+                <th>Yardage</th>
+                <td class="yardTwo"></td>
+                <td class="yardTwo"></td>
+                <td class="yardTwo"></td>
+                <td class="yardTwo"></td>
+                <td class="yardTwo"></td>
+                <td class="yardTwo"></td>
+                <td class="yardTwo"></td>
+                <td class="yardTwo"></td>
+                <td class="yardTwo"></td>
+                <td id="yard-in"></td>
+                <td id="yard-total-total"></td>
+            </tr>
+            <tr id="parTwo">
+                <th>Par</th>
+                <td class="parTwo"></td>
+                <td class="parTwo"></td>
+                <td class="parTwo"></td>
+                <td class="parTwo"></td>
+                <td class="parTwo"></td>
+                <td class="parTwo"></td>
+                <td class="parTwo"></td>
+                <td class="parTwo"></td>
+                <td class="parTwo"></td>
+                <td id="par-in"></td>
+                <td id="par-total-total"></td>
+            </tr>
+            <tr id="handicapTwo">
+                <th>Handicap</th>
+                <td class="handicapTwo"></td>
+                <td class="handicapTwo"></td>
+                <td class="handicapTwo"></td>
+                <td class="handicapTwo"></td>
+                <td class="handicapTwo"></td>
+                <td class="handicapTwo"></td>
+                <td class="handicapTwo"></td>
+                <td class="handicapTwo"></td>
+                <td class="handicapTwo"></td>
+                <td id="handicap-in"></td>
+                <td id="hcp-total-total"></td>
+            </tr>
+            <tr id="player1" class="playerHeaderTwo secondOption">
+                <th class="playerName1 players 1"><input type="text" name="player" id="player" placeholder=". . ." onchange="newPlayerName(this)"></th>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score1" placeholder=". . ." onchange="displayOnPlayerTwo()"></td>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score2" placeholder=". . ." onchange="displayOnPlayerTwo()"></td>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score3" placeholder=". . ." onchange="displayOnPlayerTwo()"></td>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score4" placeholder=". . ." onchange="displayOnPlayerTwo()"></td>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score5" placeholder=". . ." onchange="displayOnPlayerTwo()"></td>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score6" placeholder=". . ." onchange="displayOnPlayerTwo()"></td>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score7" placeholder=". . ." onchange="displayOnPlayerTwo()"></td>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score8" placeholder=". . ." onchange="displayOnPlayerTwo()"></td>
+                <td class="player1 players"><input type="number" class="playInp1" name="score" id="score9" placeholder=". . ." onchange="displayOnPlayerTwo()"></td>
+                <td class="playerSpec players" id="play-total1-in"></td>
+                <td class="playerSpec players" id="play-total1-total"></td>
+            </tr>
+            <tr>
+                <td onclick="addPlayer(this)" id="newPlayTwo" colspan="12"><p>+</p></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <input type="button" value="←" id="prevCard" onclick="prevCardFunc()" onmouseover="closeSelectTee()">
+    <input type="button" value="→" id="nextCard" onclick="nextCardFunc()" onmouseover="closeSelectTee()">
 
     <h1 id="playerLimit">You can only have 5 players</h1>
 </body>

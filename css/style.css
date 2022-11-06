@@ -69,7 +69,17 @@ td {
   color: #fbfbff;
 }
 
+#yardageTwo td, #yardageTwo th {
+  background-color: #FF0078;
+  color: #fbfbff;
+}
+
 #par td, #par th {
+  background-color: #9411CD;
+  color: #fbfbff;
+}
+
+#parTwo td, #parTwo th {
   background-color: #9411CD;
   color: #fbfbff;
 }
@@ -79,10 +89,9 @@ td {
   color: #333D5B;
 }
 
-.playInp {
-  padding: 0;
-  margin: 0;
-  height: 200%;
+#handicapTwo td, #handicapTwo th {
+  background-color: #35E7FF;
+  color: #333D5B;
 }
 
 .playerName {
@@ -164,7 +173,7 @@ input:focus {
   color: #161A27;
 }
 
-input[type=text] {
+.players input[type=text] {
   font-weight: bold;
   font-size: 15px;
   background-color: var(--background-color);
@@ -198,6 +207,11 @@ input[type=number]::placeholder {
   color: var(--text-color);
 }
 
+.playerHeaderTwo td, .playerHeaderTwo th {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
 .playerSpec {
   background-color: #0a0a0a;
   padding-left: 10px;
@@ -210,8 +224,8 @@ input[type=number]::placeholder {
   border: #F7CA08 2px solid;
   color: #fbfbff;
   position: absolute;
-  right: 87%;
-  top: 120%;
+  left: 9vw;
+  top: 10vh;
   font-size: 20px;
   transition: 0.2s;
 }
@@ -255,6 +269,32 @@ input[type=number]::placeholder {
   transition: 0.2s;
 }
 
+#newPlayTwo {
+  background-color: #333D5B;
+  color: #fbfbff;
+  font-weight: 900;
+  font-size: 22px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  transition: 0.2s;
+}
+#newPlayTwo p {
+  transition: 0.2s;
+}
+
+#newPlayTwo:hover {
+  transition: 0.2s;
+  cursor: pointer;
+  padding: 0;
+  text-shadow: 0px 0px 27px rgba(255, 255, 255, 0.8);
+}
+#newPlayTwo:hover p {
+  transition: 0.2s;
+  transform: scale(1.2);
+  padding: 0;
+}
+
 #newPlay:hover {
   transition: 0.2s;
   cursor: pointer;
@@ -273,7 +313,7 @@ input[type=number]::placeholder {
   flex-flow: column;
   position: absolute;
   left: 38.2vw;
-  top: 15.5vh;
+  top: 14.5vh;
   border: 3px solid #0a0a0a;
   border-radius: 14px;
   display: none;
@@ -363,9 +403,13 @@ input[type=number]::placeholder {
 
 #playerLimit {
   color: #F4154D;
-  transition: 1s;
+  transition: 0.2s;
   opacity: 0;
   background-color: black;
+}
+
+#nineToEighteen {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
